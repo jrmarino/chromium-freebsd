@@ -1,6 +1,15 @@
---- chrome/browser/ui/ui_features.cc.orig	2023-12-13 12:27:17 UTC
+--- chrome/browser/ui/ui_features.cc.orig	2024-07-30 11:12:21 UTC
 +++ chrome/browser/ui/ui_features.cc
-@@ -315,7 +315,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRenderer,
+@@ -120,7 +120,7 @@ BASE_FEATURE(kEvDetailsInPageInfo,
+              "EvDetailsInPageInfo",
+              base::FEATURE_ENABLED_BY_DEFAULT);
+ 
+-#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX)
++#if BUILDFLAG(IS_WIN) || BUILDFLAG(IS_MAC) || BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_BSD)
+ // Enables the feature to remove the last confirmation dialog when relaunching
+ // to update Chrome.
+ BASE_FEATURE(kFewerUpdateConfirmations,
+@@ -426,7 +426,7 @@ BASE_FEATURE(kTopChromeWebUIUsesSpareRenderer,
               "TopChromeWebUIUsesSpareRenderer",
               base::FEATURE_ENABLED_BY_DEFAULT);
  
